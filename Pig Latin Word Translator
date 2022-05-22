@@ -1,0 +1,16 @@
+vowels = "aeiouAEIOU"
+
+word = input("What word do you want to translate to piglatin? ")
+word = word.lower()
+
+if word[0] in vowels:
+    translated_word = word + "way"
+else:
+    word_list = list(word)
+    letter = word_list[0]
+    new_list = word_list.append(letter)
+    letter_removed = word_list.pop(0)
+    translated_word = "".join(word_list) + "ay"
+
+x = translated_word.lower()
+print(x)
